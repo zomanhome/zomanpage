@@ -1,0 +1,69 @@
+.photos {
+  animation: showPhotos 1s;
+  img:not(.selected) {
+    &:hover {
+      padding: 2px;
+      animation: showHover 0.2s;
+      opacity: 0.6;
+    }
+  }
+}
+
+.nav-pills {
+  margin: 20px;
+  position: fixed;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+  z-index: 10000;
+  margin-bottom: 5px !important;
+  a {
+    margin: 2px;
+    border: 1px solid #fff;
+  }
+  button {
+    color: #fff;
+    margin: 2px;
+    border: 1px solid #fff;
+    &:hover {
+      border: 1px solid #fff;
+      background: #282828;
+    }
+  }
+}
+
+.selected {
+  &:hover {
+    opacity: 1;
+  }
+  border: 2px solid #2a9fd6;
+  opacity: 1 !important;
+}
+
+@keyframes showHover {
+  from {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes showPhotos {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
