@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Gallery from "react-photo-gallery";
+
 import { getPhotosAction } from "../../../actions/photos";
 import PhotosMenu from "./photos-menu";
 
@@ -54,7 +55,7 @@ class Photos extends Component {
     if (scroll === maxScroll) {
       // Добавляем фото со случайной страницы, чтобы не одно и то же
       this.props.getPhotos(
-        Math.round(Math.random() * 4999 + 1),
+        Math.round(Math.random() * 1999 + 1),
         this.per_page,
         this.order_by
       );
@@ -63,8 +64,10 @@ class Photos extends Component {
 
   onClick = e => {
     const img = e.target;
+
     // Первым делом
     img.classList.toggle("selected");
+
     /*
     Для хранения избранных фотографий будем использовать localStorage
     который мы инициализировали в app
@@ -76,7 +79,8 @@ class Photos extends Component {
         id: img.id,
         src: img.src,
         width: img.width,
-        height: img.height
+        height: img.height,
+        caption: img.alt
       });
       // Добавили
       localStorage.setObj("photos", obj);

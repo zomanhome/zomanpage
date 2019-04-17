@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Alert } from "react-bootstrap";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { devToolsEnhancer } from "redux-devtools-extension";
@@ -39,9 +38,7 @@ class App extends Component {
               <Route path="/radio" component={Radio} />
               <Route path="/photos" component={Photos} />
               <Route path="/favorites" component={Favorites} />
-              <Route
-                render={() => <Alert variant="warning">Page not found</Alert>}
-              />
+              <Route component={Home} />
             </Switch>
           </div>
         </BrowserRouter>

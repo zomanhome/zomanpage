@@ -59,12 +59,6 @@ const Header = () => {
               </NavDropdown.Item>
             </LinkContainer>
           </NavDropdown>
-          <LinkContainer to="/100500">
-            <Nav.Link>
-              <FontAwesomeIcon icon="bomb" />
-              {` 404`}
-            </Nav.Link>
-          </LinkContainer>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

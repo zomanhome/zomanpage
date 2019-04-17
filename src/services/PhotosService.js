@@ -4,7 +4,7 @@ import {
   DEFAULT_PHOTOS_PER_PAGE,
   DEFAULT_PHOTOS_ORDER_BY
 } from "../constants/photos";
-import { getParamsString } from "../services/util";
+import { getParamsString, getParamsStringPhoto } from "../services/util";
 
 class PhotoService {
   static getPhotos(
@@ -39,6 +39,7 @@ class PhotoService {
           }
 
           // Фиксим для Gallery
+          photo.alt = photo.description || photo.alt_description;
           photo.src = photo.urls.small;
           photo.sponsored = null;
           photo.liked_by_user = null;
@@ -46,6 +47,23 @@ class PhotoService {
         });
 
         return photos;
+      });
+  }
+
+  static getPhoto(id) {
+    const url = getParamsStringPhoto(
+      {
+        client_id: API_PHOTOS_KEY
+      },
+      API_GET_PHOTOS_URL,
+      id
+    );
+    return fetch(url)
+      .then(data => {
+        return data.json();
+      })
+      .then(photo => {
+        return photo;
       });
   }
 }
