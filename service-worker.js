@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/zomanpage/precache-manifest.d1eded17323d5f50feed1ae92b7c7d7f.js"
+  "/zomanpage/precache-manifest.e1815710067d24909320de14ed69fffb.js"
 );
 
 workbox.clientsClaim();

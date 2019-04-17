@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/zomanpage/static/js/runtime~main.b1fdb869.js"
   },
   {
-    "revision": "2aa5cabcd03c6409087d",
-    "url": "/zomanpage/static/js/main.27aa54d1.chunk.js"
+    "revision": "a8abba56dae9a428a052",
+    "url": "/zomanpage/static/js/main.3494a7f0.chunk.js"
   },
   {
-    "revision": "030a8cf7bce7b537cfde",
-    "url": "/zomanpage/static/js/2.5bb36330.chunk.js"
+    "revision": "c136e5db024457096e59",
+    "url": "/zomanpage/static/js/2.93dc39d5.chunk.js"
   },
   {
-    "revision": "2aa5cabcd03c6409087d",
-    "url": "/zomanpage/static/css/main.99c636e6.chunk.css"
+    "revision": "a8abba56dae9a428a052",
+    "url": "/zomanpage/static/css/main.5477d806.chunk.css"
   },
   {
-    "revision": "52533bdfd82798a2ea6e926b2ca3ba2b",
+    "revision": "ad55614291bb58c451f9054f54454868",
     "url": "/zomanpage/index.html"
   }
 ];
